@@ -1,0 +1,8 @@
+# Ignorar dependencias
+node_modules/
+
+# Ignorar los archivos de contraseñas
+.env
+
+# Ignorar la versión final compilada de React
+dist/
