@@ -10,17 +10,25 @@ const {
   deleteProject 
 } = require('../controllers/projectController');
 
+// Importar el middleware de seguridad 
+const verificarToken = require('../middleware/authMiddleware');
+
+// RUTAS PÚBLICAS
+
 // Ruta READ projects
 router.get('/', getAllProjects);
 router.get('/:id', getProjectById); 
 
+
+// RUTAS PRIVADAS (Solo el Admin con Token)
+
 // Ruta CREATE projects
-router.post('/', createProject);
+router.post('/', verificarToken, createProject);
 
 // Ruta UPDATE projects
-router.put('/:id', updateProject);
+router.put('/:id', verificarToken, updateProject);
 
-// Ruta delete projects
-router.delete('/:id', deleteProject);
+// Ruta DELETE projects
+router.delete('/:id', verificarToken, deleteProject);
 
 module.exports = router;

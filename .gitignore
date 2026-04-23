@@ -6,3 +6,6 @@ node_modules/
 
 # Ignorar la versión final compilada de React
 dist/
+
+build/
+.DS_Store

@@ -3,16 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "node --watch index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["portfolio", "backend", "api", "express"],
+  "author": "Angela Sánchez Domínguez",
   "license": "ISC",
-  "description": "",
+  "description": "API Backend para portafolio personal",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "pg": "^8.20.0"
   }
 }

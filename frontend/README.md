@@ -1,16 +1,32 @@
-# React + Vite
+# Ángela Sánchez | Full Stack Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi there! I'm Ángela, and this is the source code for my personal portfolio. 
 
-Currently, two official plugins are available:
+To be completely honest, I didn't want to build just another static presentation site. I wanted to use this as an opportunity to build something a bit more robust, so I developed a full-stack application with its own custom-built Content Management System (CMS). 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The entire design follows a brutalist aesthetic: high contrast, hard edges, and straight to the point.
 
-## React Compiler
+## What's under the hood?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The project is split into two main parts: the public-facing website and a private admin dashboard where I manage my database of projects without having to touch the code.
 
-## Expanding the ESLint configuration
+**Frontend:**
+- Built with React 18 and Vite.
+- Tailwind CSS for the brutalist styling and responsive design.
+- React Router for seamless navigation without reloading.
+- Fully bilingual (English / Spanish) managed directly through the app's state.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Backend & Data:**
+- Custom REST API built with Node.js and Express.
+- Supabase (PostgreSQL) for the database.
+- Admin routes protected via JWT authentication.
+- Deployed on Render.
+
+## Want to run it locally?
+
+If you want to clone the repo and poke around the code, here are the quick steps to get it running:
+
+### 1. Clone the repo:
+```bash
+git clone [https://github.com/angelasandom/CMS-PORTAFOLIO.git](https://github.com/angelasandom/CMS-PORTAFOLIO.git)
+cd CMS-PORTAFOLIO
