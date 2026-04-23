@@ -29,7 +29,7 @@ function Admin({ language }) {
   // Pedir todos los proyectos al servidor 
   const fetchProjects = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/projects');
+      const response = await axios.get('https://cms-portafolio.onrender.com/api/projects');
       setProjects(response.data);
     } catch (error) {
       console.error("Error cargando proyectos:", error);
@@ -102,13 +102,13 @@ function Admin({ language }) {
 
       if (editingId) {
         // Si tenemos ID hacer PUT
-        await axios.put(`http://localhost:3000/api/projects/${editingId}`, payload, {
+        await axios.put(`https://cms-portafolio.onrender.com/api/projects/${editingId}`, payload, {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         setMensaje({ texto: 'PROYECTO ACTUALIZADO', tipo: 'exito' });
       } else {
         // Sino tenemos ID hacer POST 
-        await axios.post('http://localhost:3000/api/projects', payload, {
+        await axios.post('https://cms-portafolio.onrender.com/api/projects', payload, {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         setMensaje({ texto: 'PROYECTO CREADO', tipo: 'exito' });
@@ -130,7 +130,7 @@ function Admin({ language }) {
     try {
       const token = localStorage.getItem('adminToken');
       // Hacer  DELETE pasándole el ID en la URL
-      await axios.delete(`http://localhost:3000/api/projects/${id}`, {
+      await axios.delete(`https://cms-portafolio.onrender.com/api/projects/${id}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       setMensaje({ texto: 'PROYECTO ELIMINADO', tipo: 'exito' });
